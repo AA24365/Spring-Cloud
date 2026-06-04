@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      uri: http://localhost:7030    # Config Server地址
+      profile: dev                   # 环境标识
+      label: master                  # Git分支（本地模式可忽略）
+
+server:
+  port: 7031
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
