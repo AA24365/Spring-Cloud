@@ -14,9 +14,17 @@
     </parent>
 
     <artifactId>config-client</artifactId>
+    <name>config-client</name>
+    <description>Spring Cloud Config配置中心客户端</description>
 
     <dependencies>
-        <!-- Config Client - 版本由父模块BOM管理，不写version -->
+        <!-- 添加这个依赖以支持 bootstrap.yml -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
+
+        <!-- Config Client -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
